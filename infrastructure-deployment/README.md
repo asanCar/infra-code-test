@@ -25,14 +25,14 @@ What aspects need to be considered to make the code work in a CD pipeline (how d
 
 ### Additional notes
 
-## Improvements
+#### Improvements
 
 - Update the AWS provider
 - Move common tags to provider
 - Update EIP definition to match the current provider version
 - Add comments and order the network resources to group them logically (private vs. public subnets)
 
-## Things to improve
+#### Things to improve
 
 - Improve "allow_lb_write_logs" S3 bucket policy to allow only write permissions from ALBs in the same account.
 - Create a certificate with AWS ACM and expose the app to the Internet using port 443 with TLS.
