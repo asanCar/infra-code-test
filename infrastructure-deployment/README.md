@@ -22,6 +22,7 @@ What aspects need to be considered to make the code work in a CD pipeline (how d
 - Since the current ALB version doesn't have TLS configuration in place, a "expose_to_internet" have been added to configure the ALB to be internal and allow only access from within its Security Group, until a more secure implementation is in place.
 - Due to the lack of context about where this Terraform code will be used, no modules have been implemented for the sake of simplicity over reutilization.
 - In order for the EC2 instances to have the connection details to connect to the RDS database, these could be stored in SecretsManager and then retrieved from the EC2 scripts. This will require additional resources IAM permissions to be created.
+- Given the initial files structure, we assume the company uses a convention to group resources in vertical domains (e.g. network, runtime, storage), therefore that's the convention followed in this solution.
 
 ### Additional notes
 
